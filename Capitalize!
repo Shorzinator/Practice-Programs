@@ -1,0 +1,13 @@
+def solve(s):                           # function defined to convert lower case strings to title case
+    s = s.split()
+    str = " "
+
+    for i in range(len(s)):
+        s[i] = s[i].capitalize()
+
+    return str.join(s)
+
+if __name__ == '__main__':              # The program can be performed in just one column, but I have 
+    s = input()                         # modulated the code to make it more clear
+    result = solve(s)
+    print(result)
