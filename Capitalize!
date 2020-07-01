@@ -1,5 +1,5 @@
-def solve(s):                           # function defined to convert lower case strings to title case
-    s = s.split()
+def solve1(s):                           # function defined to convert lower case strings to title case
+    s = s.split()                        # this function does not retain extra spaces
     str = " "
 
     for i in range(len(s)):
@@ -7,7 +7,15 @@ def solve(s):                           # function defined to convert lower case
 
     return str.join(s)
 
+def solve2(s):                           # this function does the same as the one above and retaisn spaces
+    o = []
+    s = list(map(str,s.split(' ')))
+    for i in s:
+    o.append(i.capitalize())
+    return ' '.join(o)
+    
 if __name__ == '__main__':              # The program can be performed in just one column, but I have 
     s = input()                         # modulated the code to make it more clear
-    result = solve(s)
+    result1 = solve(s)
+    result2 = solve2(s)
     print(result)
