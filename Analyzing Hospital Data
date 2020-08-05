@@ -1,0 +1,25 @@
+best<-function(state, outcome){
+        data <- read.csv("~/R/Projects/outcome-of-care-measures.csv", colClasses = "character", header=TRUE)
+        fd   <- as.data.frame(cbind(data[, 2],   # hospital
+                                    data[, 7],   # state
+                                    data[, 11],  # heart attack
+                                    data[, 17],  # heart failure
+                                    data[, 23]), # pneumonia
+                              stringsAsFactors = FALSE)
+        colnames(fd) <- c("hospital", "state", "heart attack", "heart failure", "pneumonia")
+        
+        ## Check that state and outcome are valid
+        if(!state %in% fd[, "state"]){
+                stop('invalid state')
+        } else if(!outcome %in% c("heart attack", "heart failure", "pneumonia")){
+                stop('invalid outcome')
+        } else {
+                si <- which(fd[, "state"] == state)   # provides the index of all positions of state provided as argument
+                ts <- fd[si, ]                        # extracting data for the called state, basically displaying the data for "state"
+                oi <- as.numeric(ts[, eval(outcome)]) # provides the data regarding our required "outcome"
+                min_val <- min(oi, na.rm = TRUE)      # calculating minimum value
+                result  <- ts[, "hospital"][which(oi == min_val)] 
+                output  <- result[order(result)]
+        }
+        return(output)
+}
