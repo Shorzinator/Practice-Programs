@@ -1,0 +1,18 @@
+import textwrap                                         # importing the package used for wrapping strings
+
+def wrap(string, max_width):                            # A function to wrap a string                             
+    # Wrap this text. 
+    wrapper = textwrap.TextWrapper(width=max_width)     
+    word_list = wrapper.wrap(text=string)
+
+    # Print each line.
+    new = list()                        
+    for element in word_list:
+        new.append(element)                             # fromatting the empty string with wrapped string
+
+    return('\n'.join(new))                              # converting the string that is split as elemnts in list to a continous, wrapped string
+
+if __name__ == '__main__':
+    string, max_width = input(), int(input())
+    result = wrap(string, max_width)
+    print(result)
