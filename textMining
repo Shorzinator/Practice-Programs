@@ -1,0 +1,28 @@
+# Importing necessary library
+# sample text for performing tokenization
+text = "la la la la ka ka ka ka ka ka ka na ma ja ba ya ha ua ka la"
+# importing word_tokenize from nltk
+from nltk.tokenize import word_tokenize
+from nltk.probability import FreqDist
+from nltk import word_tokenize
+from nltk.corpus import stopwords
+
+# Passing the string text into word tokenize for breaking the sentences
+token = word_tokenize(text)
+print(token)
+
+fdist_alt1 = dict(FreqDist(token))
+fdist = FreqDist(token)
+print(fdist_alt1)
+
+fdist1 = fdist.most_common(10)
+print(fdist1)
+
+a = set(stopwords.words("french"))
+text = "Christiano was born on 3 may 1029 in Munich."
+text1 = word_tokenize(text.lower())
+print(text1)
+stopwords = [x for x in text1 if x not in a]
+print(stopwords)
+
+
