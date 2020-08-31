@@ -1,0 +1,51 @@
+def upper_half(w, l):
+    global a, n
+    z = 1
+
+    while z < ((w + 1) / 2):
+        a = (z * 2) - 1
+        n = int((l - (a * 3)) / 2)  # parameter for printing "-"
+
+        print("-" * n, end="")
+        print(".|." * a, end="")
+        print("-" * n)
+        z += 1
+
+        if z == ((w + 1) / 2):
+            middle_line()
+
+    lower_half(z)
+
+
+def middle_line():
+    print("-" * y, end="")
+    print("WELCOME", end="")
+    print("-" * y)
+
+
+def lower_half(z):
+    t = 2
+    u = 3
+    while z < w:
+        b = w - t
+        p = u  # parameter for printing "-"
+        print("-" * p, end="")
+        print(".|." * b, end="")
+        print("-" * p)
+        z += 1
+        t += 2
+        u += 3
+
+
+if __name__ == "__main__":
+    print("Enter width: ")
+    w = int(input())  # width
+
+    l = w * 3  # length
+    y = int((l - 7) / 2)  # parameter for printing "WELCOME"
+
+    z = 1
+    a = (z * 2) - 1
+    n = int((l - (a * 3)) / 2)  # parameter for printing "-"
+
+    upper_half(w, l)
