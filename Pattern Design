@@ -6,8 +6,8 @@ def upper_half(w, l):
         a = (z * 2) - 1
         n = int((l - (a * 3)) / 2)  # parameter for printing "-"
 
-        print("-" * n, end="")
-        print(".|." * a, end="")
+        print("-" * n, end='')
+        print(".|." * a, end='')
         print("-" * n)
         z += 1
 
@@ -18,8 +18,8 @@ def upper_half(w, l):
 
 
 def middle_line():
-    print("-" * y, end="")
-    print("WELCOME", end="")
+    print("-" * y, end='')
+    print("WELCOME", end='')
     print("-" * y)
 
 
@@ -29,8 +29,8 @@ def lower_half(z):
     while z < w:
         b = w - t
         p = u  # parameter for printing "-"
-        print("-" * p, end="")
-        print(".|." * b, end="")
+        print("-" * p, end='')
+        print(".|." * b, end='')
         print("-" * p)
         z += 1
         t += 2
@@ -38,14 +38,9 @@ def lower_half(z):
 
 
 if __name__ == "__main__":
-    print("Enter width: ")
-    w = int(input())  # width
+    w, l = list(map(int, input().split()))  # width
 
-    l = w * 3  # length
+    # l = w * 3  # length
     y = int((l - 7) / 2)  # parameter for printing "WELCOME"
-
-    z = 1
-    a = (z * 2) - 1
-    n = int((l - (a * 3)) / 2)  # parameter for printing "-"
 
     upper_half(w, l)
