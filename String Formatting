@@ -1,0 +1,15 @@
+def print_formatted(number):
+    w = len(str(bin(number)).replace("0b", ""))               # formatting relative to the binary number
+    for _ in range(1, number + 1):
+        d = str(_).rjust(w, " ")                              #decimal
+        o = oct(_).replace("0o", "").rjust(w, " ")            #octal
+        h = hex(_).replace("0x", "").upper().rjust(w, " ")    #hexadecimal
+        b = bin(_).replace("0b", "").rjust(w, " ")            #binary
+
+        print(d, o, h, b)
+
+
+if __name__ == '__main__':
+    n = int(input())
+    print_formatted(n)
+
