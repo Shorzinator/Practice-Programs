@@ -1,4 +1,4 @@
-# Heap Sort
+# &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Heap Sort
 
 Heapsort is a comparison-based sorting algorithm.
 Heapsort can be thought of as an improved selection
@@ -11,6 +11,8 @@ rather than a linear-time search to find the maximum.
 
 ![Algorithm Visualization](https://upload.wikimedia.org/wikipedia/commons/1/1b/Sorting_heapsort_anim.gif)
 
+#### Here is a visualization, using an array and tree structure, for heap sort - 
+
 ![Algorithm Visualization](https://upload.wikimedia.org/wikipedia/commons/4/4d/Heapsort-example.gif)
 
 ## Complexity
@@ -19,6 +21,15 @@ rather than a linear-time search to find the maximum.
 | --------------------- | :-------------: | :-----------------: | :-----------------: | :-------: | :-------: | :-------- |
 | **Heap sort**         | n&nbsp;log(n)   | n&nbsp;log(n)       | n&nbsp;log(n)       | 1         | No        |           |
 
+
+
+
+
+
+
+
+
 ## References
 
 [Wikipedia](https://en.wikipedia.org/wiki/Heapsort)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
