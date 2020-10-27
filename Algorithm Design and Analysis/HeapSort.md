@@ -60,7 +60,7 @@ for i in range(n):
 	print ("%d" %arr[i]), 
 
 ```
-
+### Visualizing Heap Sort - 
 
 ![Algorithm Visualization](https://upload.wikimedia.org/wikipedia/commons/1/1b/Sorting_heapsort_anim.gif)
 
