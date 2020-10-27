@@ -1,3 +1,5 @@
+![leaves](https://user-images.githubusercontent.com/62899599/97261107-2d319900-1844-11eb-8750-4eb107f3f314.jpg)
+
 # &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Heap Sort
 
 Heapsort is a comparison-based sorting algorithm.
@@ -9,6 +11,20 @@ element and moving that to the sorted region. The
 improvement consists of the use of a heap data structure
 rather than a linear-time search to find the maximum.
 
+### What is Binary Heap?
+Let us first define a Complete Binary Tree. A complete binary tree is a binary tree in which every level, except possibly the last, is completely filled, and all nodes are as far left as possible. A Binary Heap is a Complete Binary Tree where items are stored in a special order such that value in a parent node is greater(or smaller) than the values in its two children nodes. The former is called as max heap and the latter is called min-heap. The heap can be represented by a binary tree or array.
+
+### Why array based representation for Binary Heap?
+Since a Binary Heap is a Complete Binary Tree, it can be easily represented as an array and the array-based representation is space-efficient. If the parent node is stored at index I, the left child can be calculated by 2 * I + 1 and right child by 2 * I + 2 (assuming the indexing starts at 0).
+
+## Heap Sort Algorithm for sorting in increasing order:
+1. Build a max heap from the input data.
+2. At this point, the largest item is stored at the root of the heap. Replace it with the last item of the heap followed by reducing the size of heap by 1. Finally, heapify the root of the tree.
+3. Repeat step 2 while size of heap is greater than 1.
+
+
+---
+
 ### Python program to implement a Heap Sort using Heapify function - 
 
 ```
@@ -16,50 +32,47 @@ rather than a linear-time search to find the maximum.
 
 # To heapify subtree rooted at index i. 
 # n is size of heap 
-def heapify(arr, n, i): 
-	  largest = i # Initialize largest as root 
-	  l = 2 * i + 1	 # left = 2*i + 1 
-	  r = 2 * i + 2	 # right = 2*i + 2 
+# heapify
+def heapify(arr, n, i):
+        largest = i  # largest value
+        l = 2 * i + 1  # left
+        r = 2 * i + 2  # right
+        # if left child exists
+        if l < n and arr[ i ] < arr[ l ]:
+                largest = l
+        # if right child exits
+        if r < n and arr[ largest ] < arr[ r ]:
+                largest = r
+        # root
+        if largest != i:
+                arr[ i ], arr[ largest ] = arr[ largest ], arr[ i ]  # swap
+                # root.
+                heapify(arr, n, largest)
 
-	  # See if left child of root exists and is 
-	  # greater than root 
-	  if l < n and arr[i] < arr[l]: 
-		    largest = l 
 
-	  # See if right child of root exists and is 
-	  # greater than root 
-	  if r < n and arr[largest] < arr[r]: 
-		    largest = r 
+# sort
+def heapSort(arr):
+        n = len(arr)
+        # maxheap
+        for i in range(n, -1, -1):
+                heapify(arr, n, i)
+        # element extraction
+        for i in range(n - 1, 0, -1):
+                arr[ i ], arr[ 0 ] = arr[ 0 ], arr[ i ]  # swap
+                heapify(arr, i, 0)
 
-	  # Change root, if needed 
-	  if largest != i: 
-		    arr[i],arr[largest] = arr[largest],arr[i] # swap 
 
-		# Heapify the root. 
-		heapify(arr, n, largest) 
-
-# The main function to sort an array of given size 
-def heapSort(arr): 
-	  n = len(arr) 
-
-	  # Build a maxheap. 
-	  for i in range(n//2 - 1, -1, -1): 
-		    heapify(arr, n, i) 
-
-	  # One by one extract elements 
-	  for i in range(n-1, 0, -1): 
-		    arr[i], arr[0] = arr[0], arr[i] # swap 
-		    heapify(arr, i, 0) 
-
-# Driver code to test above 
-arr = [ 12, 11, 13, 5, 6, 7] 
-heapSort(arr) 
-n = len(arr) 
-print ("Sorted array is") 
-for i in range(n): 
-	print ("%d" %arr[i]), 
+# main
+arr = [ 2, 5, 3, 8, 6, 5, 4, 7 ]
+heapSort(arr)
+n = len(arr)
+print("Sorted array is")
+for i in range(n):
+        print(arr[ i ], end = " ")
 
 ```
+![Heap_arrays](https://user-images.githubusercontent.com/62899599/97261649-438c2480-1845-11eb-982d-c31c8e07857a.jpg)
+
 ### Visualizing Heap Sort - 
 
 ![Algorithm Visualization](https://upload.wikimedia.org/wikipedia/commons/1/1b/Sorting_heapsort_anim.gif)
@@ -74,7 +87,9 @@ for i in range(n):
 | --------------------- | :-------------: | :-----------------: | :-----------------: | :-------: | :-------: | :-------- |
 | **Heap sort**         | n&nbsp;log(n)   | n&nbsp;log(n)       | n&nbsp;log(n)       | 1         | No        |           |
 
+---
 
+### Output of the program given above - 
 
 
 ## References
