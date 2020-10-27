@@ -1,6 +1,6 @@
 ![leaves](https://user-images.githubusercontent.com/62899599/97261107-2d319900-1844-11eb-8750-4eb107f3f314.jpg)
 
-# &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Heap Sort
+# &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Heap Sort*
 
 Heapsort is a comparison-based sorting algorithm.
 Heapsort can be thought of as an improved selection
@@ -21,7 +21,6 @@ Since a Binary Heap is a Complete Binary Tree, it can be easily represented as a
 1. Build a max heap from the input data.
 2. At this point, the largest item is stored at the root of the heap. Replace it with the last item of the heap followed by reducing the size of heap by 1. Finally, heapify the root of the tree.
 3. Repeat step 2 while size of heap is greater than 1.
-
 
 ---
 
@@ -90,6 +89,7 @@ for i in range(n):
 ---
 
 ### Output of the program given above - 
+![Screenshot (13)](https://user-images.githubusercontent.com/62899599/97264619-4d188b00-184b-11eb-98f7-8da806f7a802.png)
 
 
 ## References
