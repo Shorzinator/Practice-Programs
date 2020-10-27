@@ -79,7 +79,7 @@ for i in range(n):
 #### Here is a visualization, using an array and tree structure, for heap sort - 
 
 ![Algorithm Visualization](https://upload.wikimedia.org/wikipedia/commons/4/4d/Heapsort-example.gif)
-
+<br/>
 ## Complexity
 
 | Name                  | Best            | Average             | Worst               | Memory    | Stable    | Comments  |
@@ -91,6 +91,7 @@ for i in range(n):
 ### Output of the program given above - 
 ![Screenshot (13)](https://user-images.githubusercontent.com/62899599/97264619-4d188b00-184b-11eb-98f7-8da806f7a802.png)
 
+<br/>
 
 ## References
 
