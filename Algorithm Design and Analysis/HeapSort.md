@@ -82,9 +82,9 @@ for i in range(n):
 <br/>
 ## Complexity
 
-| Name                  | Best            | Average             | Worst               | Memory    | Stable    | Comments  |
-| --------------------- | :-------------: | :-----------------: | :-----------------: | :-------: | :-------: | :-------- |
-| **Heap sort**         | n&nbsp;log(n)   | n&nbsp;log(n)       | n&nbsp;log(n)       | 1         | No        |           |
+| Name                  | Best            | Average             | Worst               | Memory    | Stable    |
+| --------------------- | :-------------: | :-----------------: | :-----------------: | :-------: | :-------  |
+| **Heap sort**         | n&nbsp;log(n)   | n&nbsp;log(n)       | n&nbsp;log(n)       | 1         | No        |          
 
 ---
 
