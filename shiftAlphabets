@@ -1,0 +1,21 @@
+print("Enter a string of choice: ")
+string = input()
+
+print("Enter the key to shift the Alphabets: ")
+key = int(input())
+def cipher(string, key) :
+    newKey = key % 26
+    
+    newString = []
+    for i in string :
+        reqIdx = ord(i) + newKey
+        if reqIdx > 122 :
+            temp = reqIdx - ord("z")
+            newIdx = 96 + temp
+            newString.append(chr(newIdx))
+        else :
+            newString.append(chr(reqIdx))
+    return "".join(newString)
+
+res = cipher(string, key)
+print("String after shift:", res)
