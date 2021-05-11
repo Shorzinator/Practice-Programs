@@ -3,6 +3,10 @@ string = input()
 
 print("Enter the key to shift the Alphabets: ")
 key = int(input())
+
+import time
+begin = time.time()
+
 def cipher(string, key) :
     newKey = key % 26
     
@@ -18,4 +22,7 @@ def cipher(string, key) :
     return "".join(newString)
 
 res = cipher(string, key)
-print("String after shift:", res)
+
+time.sleep(1)   # to account for very small times
+end = time.time()
+print(res, ", Time Taken:", (end-begin))
