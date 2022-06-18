@@ -8,3 +8,7 @@ def mintime(queries) :
         total.append(temp)
         
     return sum(total)
+
+numProcesses = int(input())
+queries = [int(input()) for i in range(numProcesses)]
+print(mintime(queries))
