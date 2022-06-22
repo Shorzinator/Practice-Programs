@@ -13,3 +13,12 @@ def bubbleSort(array):
          counter += 1       
          
     return array
+
+array = [8, 5, 2, 9, 5, 6, 3]
+
+"""
+length = int(input()
+array = [int(input()) for i in range(length)]
+"""
+
+print("Sorted Array:", bubbleSort(array))
