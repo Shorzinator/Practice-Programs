@@ -21,3 +21,13 @@ def tln(array) :
                     break
             print("result (after):", result, "\n")
     return result[:3]
+
+array = [141, 1, 17, -7, -17, -27, 18, 541, 8, 7, 7]
+
+"""
+
+length = int(input()          # Length of the custom array for input 
+array = [int(input()) for i in range(len(length))]
+"""
+
+print("Final result:", tln(array))
