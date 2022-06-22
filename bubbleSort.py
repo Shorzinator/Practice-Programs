@@ -6,9 +6,7 @@ def bubbleSort(array):
         isSorted = True
         for i in range(len(array) - 1 - counter) :
             if array[i] > array[i + 1] :
-                temp = array[i]
-                array[i] = array[i + 1]
-                array[i + 1] = temp
+                array[i], array[i + 1] = array[i + 1], array[i]
                 isSorted = False
          counter += 1       
          
