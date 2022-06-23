@@ -8,3 +8,12 @@ def selectionSort(array) :
         array[smallestIdx], array[currentIdx] = array[currentIdx], array[smallestIdx]
         currentIdx += 1
     return array
+
+array = [8, 5, 2, 9, 5, 6, 3]
+
+"""
+length = int(input())
+array = [int(input()) for i in range(length)]
+"""
+
+print("Sorted Array:", selectionSort(array))
